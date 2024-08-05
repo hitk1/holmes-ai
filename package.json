@@ -1,0 +1,30 @@
+{
+  "name": "holmes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": {
+    "name": "Luis Paulo M. Degini",
+    "email": "luispaulo.degini@gmail.com",
+    "url": "https://github.com/hitk1"
+  },
+  "engines": {
+    "node": "~20.11",
+    "yarn": "~1.22"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn tsc --target ES2020 --experimentalDecorators --emitDecoratorMetadata",
+    "dev": "tsx watch --inspect --ignore ./node_modules ./src/index.ts",
+    "start": "node  --optimize_for_size --max_old_space_size=460 ./dist/index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "openai": "^4.54.0",
+    "prompt-sync": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/prompt-sync": "^4.2.3",
+    "tsx": "^4.16.5",
+    "typescript": "^5.5.4"
+  }
+}
