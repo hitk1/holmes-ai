@@ -54,27 +54,19 @@ function greetings() {
 
 process.on('SIGINT', () => {
     closeApp()
-    console.log('sigint')
     process.exit(0)
 })
 
 process.on('unhandledRejection', () => {
     closeApp()
-    console.log('unhandledRejection')
     process.exit(0)
 })
 
 process.on('unhandledException', () => {
     closeApp()
-    console.log('unhandledException')
     process.exit(0)
 })
 
 process.on('exit', () => {
     closeApp()
-    console.log('exit')
 })
-
-// process.on('SIGKILL', () => {
-//     console.log('close signal has been received')
-// })
